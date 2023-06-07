@@ -16,42 +16,42 @@ const Form = ({type,post,setPost,submitting,handleSubmit}) => {
             Your AI prompt
           </span>
           <textarea
-          value={post.prompt}
-          onChange={(e)=>{
-            setPost({
-              ...post,
-              prompt: e.target.value
-            })
-          }}
-          placeholder="Write your prompt here"
-          required
-          className="form_textarea"
+            value={post.prompt}
+            onChange={(e)=>{
+              setPost({
+                ...post,
+                prompt: e.target.value
+              })
+            }}
+            placeholder="Write your prompt here"
+            required
+            className="form_textarea"
           />
         </label>
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
             Tags
-            <span className="font-normal" > (#product , #coding)</span>
+          <span className="font-normal" > (#product , #coding)</span>
           </span>
           <input
-          value={post.tag}
-          onChange={(e)=>{
-            setPost({
-              ...post,
-              tag: e.target.value
-            })
-          }}
-          placeholder="#tag"
-          required
-          className="form_input"
+            value={post.tag}
+            onChange={(e)=>{
+              setPost({
+                ...post,
+                tag: e.target.value
+              })
+            }}
+            placeholder="#tag"
+            required
+            className="form_input"
           />
         </label>
         <div className="flex-end mx-d md-5 gap-4">
           <Link 
-          className="text-gray-700 text-sm"
-          href={"/"}
-          >
-            Cancel
+            className="text-gray-700 text-sm"
+            href={"/"}
+            >
+              Cancel
           </Link>
           <button 
             type="submit"
@@ -61,12 +61,7 @@ const Form = ({type,post,setPost,submitting,handleSubmit}) => {
           {submitting ? `${type}...` : type}
         </button>
         </div>
-
         </form>
-
-
-
-
     </section>
   )
 }

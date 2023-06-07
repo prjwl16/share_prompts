@@ -22,8 +22,6 @@ const handler = NextAuth({
     },
     async signIn({ profile }) {
       try {
-        await connectDB();
-
         //create user on absens
         const userExists = await User.findOne({
           email: profile.email,
