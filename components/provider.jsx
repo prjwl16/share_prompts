@@ -8,6 +8,7 @@ const Provider = ({children, session}) => {
         {children}
     </SessionProvider>
   )
+  
 }
 
 export default Provider
